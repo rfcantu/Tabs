@@ -2,8 +2,13 @@
 <title>{% block title %} {% endblock %} - Local Tabs</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
-    <h1>Local Tabs</h1>
+    <a href="{{ url_for('tab.index') }}">
+        <h1>Local Tabs</h1>
+    </a>
     <ul>
+        <li>
+            <a href="{{ url_for('chords.chord') }}">Chords</a>
+        </li>
         {% if g.user %}
         <li>
             <span>{{ g.user['username'] }}</span>

@@ -37,4 +37,7 @@ def create_app(test_config=None):
     app.register_blueprint(tab.bp)
     app.add_url_rule('/', endpoint='index')
 
+    from . import chords
+    app.register_blueprint(chords.bp)
+
     return app
